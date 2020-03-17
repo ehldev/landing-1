@@ -1,0 +1,24 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+
+    .button {
+        align-self: flex-end;
+        margin-top: 1rem;
+        padding: .6rem 2rem;
+    }
+}
+
+.form__label {
+    font-weight: 500;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.form__item {
+    margin-top: .5rem;
+    padding: 1rem;
+}

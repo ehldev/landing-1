@@ -1,0 +1,19 @@
+.button {
+    display: inline-block;
+    padding: .6rem 1.5rem;
+    border-radius: .2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 1s;
+    cursor: pointer;
+
+    &--red {
+        background-color: rgba($red, .9);
+        color: $white;
+        border: 1px solid $red;
+
+        &:hover {
+            background-color: $red;
+        }
+    }
+}

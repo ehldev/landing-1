@@ -1,0 +1,194 @@
+/* Colors */
+/* Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  background-color: #EFF1ED;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.info__container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.info__container .button {
+  align-self: flex-end;
+}
+
+.info__name-business {
+  font-size: 1.3em;
+  padding: 1rem;
+}
+
+.info__title-container {
+  padding: 1rem;
+  border: 2px solid #3c4859;
+}
+
+.info__carousel-title {
+  font-size: 5em;
+}
+
+.info__description {
+  font-size: 1.1em;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.carousel {
+  width: 50%;
+  height: 100%;
+  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  background-position: center;
+  background-size: cover;
+  z-index: 10;
+  position: relative;
+  transition: background-image 1.5s;
+}
+
+.carousel__controls {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3rem;
+  transition: background-color 1s;
+}
+
+.icon {
+  border: 2px solid #3c4859;
+  display: inline-block;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin: 1rem 0.5rem;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  transition: all 1s;
+}
+.icon:hover {
+  background-color: #3c4859;
+  width: 25px;
+  height: 13px;
+  border-radius: 35%;
+}
+.icon.active {
+  background-color: #3c4859;
+  width: 25px;
+  height: 13px;
+  border-radius: 35%;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 1s;
+  cursor: pointer;
+}
+.button--red {
+  background-color: rgba(213, 96, 98, 0.9);
+  color: #fff;
+  border: 1px solid #D56062;
+}
+.button--red:hover {
+  background-color: #D56062;
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(60, 72, 89, 0.6);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__title {
+  font-size: 1.3em;
+  text-align: center;
+  color: rgba(60, 72, 89, 0.95);
+}
+
+.modal__header {
+  background-color: #fff;
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal__icon {
+  font-weight: 700;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 35%;
+  padding: 0 3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+.form .button {
+  align-self: flex-end;
+  margin-top: 1rem;
+  padding: 0.6rem 2rem;
+}
+
+.form__label {
+  font-weight: 500;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.form__item {
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=app.css.map */
