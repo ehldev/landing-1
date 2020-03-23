@@ -1,7 +1,9 @@
 @import 'config/variables';
+@import 'mixins/rwd';
 @import 'config/reset';
 @import 'sections/main';
 
 @import 'components/buttons';
 @import 'components/modal';
 @import 'components/form';
+@import 'components/social';

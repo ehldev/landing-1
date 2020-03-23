@@ -7,3 +7,12 @@ $red: #D56062;
 
 /* Fonts */
 $main_font: 'Nunito', sans-serif;
+
+/* Breakpoints */
+
+$breakpoints : (
+    s: 0,
+    md: 40em,
+    lg: 64em,
+    xl: 84em
+) !default;

@@ -1,0 +1,21 @@
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: .5rem;
+    border-top: 1px solid rgba($dark, .7);
+
+    @include rwd(md) {
+        margin-bottom: 1rem;
+    }
+}
+
+.social__image {
+    display: inline-block;
+    max-width: 35px;
+
+    @include rwd(md) {
+        max-width: 45px;
+    }
+}

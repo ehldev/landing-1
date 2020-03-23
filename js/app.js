@@ -1,8 +1,41 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyAPYgacyxTa6K4BV-NMnsGQ9jlLjMy68vU",
+    authDomain: "estudio-z.firebaseapp.com",
+    databaseURL: "https://estudio-z.firebaseio.com",
+    projectId: "estudio-z",
+    storageBucket: "estudio-z.appspot.com",
+    messagingSenderId: "181316240568",
+    appId: "1:181316240568:web:65846fe8c4926d9d6ca04d",
+    measurementId: "G-V4BR0JS41J"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
 Vue.component('modal', {
+    data() {
+        return {
+            loading: false,
+            success: false
+        }
+    },
+    mounted() {
+        this.loading = false
+        this.success = false
+    },
     template: '#modal-template',
     methods: {
         closeModal() {
             this.$emit('close')
+        },
+        submit() {
+            this.loading = true
+
+            setTimeout(() => {
+                this.loading = false
+                this.success = true
+            }, 3000)
         }
     }
 })
@@ -14,17 +47,17 @@ const vm = new Vue({
         currentItemPosition: 0,
         items: [
             {
-                title: 'Proyecto moderno para sala 1',
+                title: 'Proyecto moderno 1',
                 image: 'images/slide-1.jpg',
                 status: true
             },
             {
-                title: 'Proyecto moderno para sala 2',
+                title: 'Proyecto moderno 2',
                 image: 'images/slide-2.jpg',
                 status: false
             },
             {
-                title: 'Mejora tu oficina',
+                title: 'Proyecto moderno 3',
                 image: 'images/slide-3.jpg',
                 status: false
             }

@@ -1,19 +1,37 @@
 .button {
     display: inline-block;
-    padding: .6rem 1.5rem;
+    padding: .5rem 1rem;
     border-radius: .2rem;
     text-transform: uppercase;
     text-decoration: none;
     transition: background-color 1s;
     cursor: pointer;
 
+    @include rwd(md) {
+        padding: .6rem 1.5rem;
+    }
+
     &--red {
-        background-color: rgba($red, .9);
+        background-color: rgba($red, .85);
         color: $white;
         border: 1px solid $red;
 
         &:hover {
             background-color: $red;
+        }
+    }
+
+    &--head {
+        @include rwd(lg) {
+            display: none;
+        }
+    }
+
+    &--info {
+        display: none;
+
+        @include rwd(lg) {
+            display: inline-block;
         }
     }
 }

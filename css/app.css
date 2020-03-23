@@ -1,5 +1,6 @@
 /* Colors */
 /* Fonts */
+/* Breakpoints */
 * {
   margin: 0;
   padding: 0;
@@ -18,58 +19,123 @@ html {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 64em) {
+  .main {
+    flex-direction: row;
+  }
 }
 
 .info {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: left;
 }
+@media screen and (min-width: 64em) {
+  .info {
+    width: 50%;
+  }
+}
+.info .social {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0;
+  border-top: none;
+}
 
 .info__container {
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.info__container .button {
-  align-self: flex-end;
+@media screen and (min-width: 40em) {
+  .info__container {
+    width: 80%;
+  }
+}
+
+.info__head-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
 }
 
 .info__name-business {
-  font-size: 1.3em;
-  padding: 1rem;
+  font-size: 1em;
+}
+@media screen and (min-width: 40em) {
+  .info__name-business {
+    padding: 1rem;
+  }
 }
 
 .info__title-container {
+  margin-top: 3rem;
   padding: 1rem;
   border: 2px solid #3c4859;
 }
+@media screen and (min-width: 64em) {
+  .info__title-container {
+    margin-top: 1rem;
+  }
+}
 
 .info__carousel-title {
-  font-size: 5em;
+  font-size: 2em;
+}
+@media screen and (min-width: 40em) {
+  .info__carousel-title {
+    font-size: 5em;
+  }
 }
 
 .info__description {
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin-top: 1rem;
   padding: 1rem;
 }
+@media screen and (min-width: 40em) {
+  .info__description {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 64em) {
+  .info__description {
+    font-size: 1.1em;
+    margin-bottom: 0;
+  }
+}
 
 .carousel {
-  width: 50%;
-  height: 100%;
-  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  width: 100%;
+  height: 50%;
   background-position: center;
   background-size: cover;
   z-index: 10;
   position: relative;
   transition: background-image 1.5s;
+}
+@media screen and (min-width: 64em) {
+  .carousel {
+    height: 40%;
+  }
+}
+@media screen and (min-width: 64em) {
+  .carousel {
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  }
 }
 
 .carousel__controls {
@@ -112,20 +178,38 @@ html {
 
 .button {
   display: inline-block;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.2rem;
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color 1s;
   cursor: pointer;
 }
+@media screen and (min-width: 40em) {
+  .button {
+    padding: 0.6rem 1.5rem;
+  }
+}
 .button--red {
-  background-color: rgba(213, 96, 98, 0.9);
+  background-color: rgba(213, 96, 98, 0.85);
   color: #fff;
   border: 1px solid #D56062;
 }
 .button--red:hover {
   background-color: #D56062;
+}
+@media screen and (min-width: 64em) {
+  .button--head {
+    display: none;
+  }
+}
+.button--info {
+  display: none;
+}
+@media screen and (min-width: 64em) {
+  .button--info {
+    display: inline-block;
+  }
 }
 
 .modal {
@@ -146,13 +230,24 @@ html {
   font-size: 1.3em;
   text-align: center;
   color: rgba(60, 72, 89, 0.95);
+  margin-top: 1rem;
 }
 
 .modal__header {
   background-color: #fff;
-  width: 35%;
+  width: 90%;
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (min-width: 64em) {
+  .modal__header {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 84em) {
+  .modal__header {
+    width: 35%;
+  }
 }
 
 .modal__icon {
@@ -163,8 +258,18 @@ html {
 
 .modal-content {
   background-color: #fff;
-  width: 35%;
+  width: 90%;
   padding: 0 3rem;
+}
+@media screen and (min-width: 64em) {
+  .modal-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 84em) {
+  .modal-content {
+    width: 35%;
+  }
 }
 
 .form {
@@ -189,6 +294,60 @@ html {
 .form__item {
   margin-top: 0.5rem;
   padding: 1rem;
+}
+
+.form__success {
+  text-align: center;
+  padding: 2rem 0.5rem;
+}
+
+.form__success-title {
+  font-size: 1.5em;
+}
+@media screen and (min-width: 40em) {
+  .form__success-title {
+    font-size: 1.7em;
+  }
+}
+
+.form__link {
+  font-size: 1.1em;
+  background-color: rgba(213, 96, 98, 0.85);
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: all 1s;
+}
+.form__link:hover {
+  background-color: #D56062;
+  color: #fff;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(60, 72, 89, 0.7);
+}
+@media screen and (min-width: 40em) {
+  .social {
+    margin-bottom: 1rem;
+  }
+}
+
+.social__image {
+  display: inline-block;
+  max-width: 35px;
+}
+@media screen and (min-width: 40em) {
+  .social__image {
+    max-width: 45px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

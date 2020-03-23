@@ -16,13 +16,22 @@
     font-size: 1.3em;
     text-align: center;
     color: rgba($dark, .95);
+    margin-top: 1rem;
 }
 
 .modal__header {
     background-color: $white;
-    width: 35%;
+    width: 90%;
     display: flex;
     justify-content: flex-end;
+
+    @include rwd(lg) {
+        width: 70%;
+    }
+
+    @include rwd(xl) {
+        width: 35%;
+    }
 }
 
 .modal__icon {
@@ -33,6 +42,14 @@
 
 .modal-content {
     background-color: $white;
-    width: 35%;
+    width: 90%;
     padding: 0 3rem;
+
+    @include rwd(lg) {
+        width: 70%;
+    }
+
+    @include rwd(xl) {
+        width: 35%;
+    }
 }
